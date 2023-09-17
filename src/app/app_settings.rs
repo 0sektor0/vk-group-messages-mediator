@@ -16,9 +16,9 @@ impl AppSettings {
         Ok(settings)
     }
 
-    pub fn get_confirmation(self: &AppSettings, id: i32) -> Option<&str> {
+    pub fn get_confirmation(self: &AppSettings, id: i32, secret: &str) -> Option<&str> {
         for group in &self.groups {
-            if group.id == id {
+            if group.id == id && group.secret == secret {
                 return Some(group.confirmation.as_str())
             }
         }
