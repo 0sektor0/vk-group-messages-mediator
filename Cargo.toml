@@ -1,0 +1,19 @@
+[build]
+targets = [
+    "x86_64-unknown-linux-gnu",
+    "x86_64-pc-windows-gnu"
+]
+
+[package]
+name = "vk-group-messages-mediator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tide = "0.16.0"
+async-std = { version = "1.8.0", features = ["attributes"] }
+serde_json = {version="1.0.99"}
+serde = {version="1.0.99", features=["derive"]}
+chrono = "0.4.31"
