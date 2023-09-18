@@ -1,8 +1,7 @@
 use super::model::group::Group;
-use serde::Deserialize;
 use std::{fs, error::Error};
 
-#[derive(Debug, Deserialize, Clone)]
+#[derive(Debug, Clone, serde::Deserialize)]
 pub struct AppSettings {
     //TODO: move to command line parameters
     pub address: String,
